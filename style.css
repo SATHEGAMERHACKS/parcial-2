@@ -1,0 +1,36 @@
+/* Contenedor principal */
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;       /* permite varias filas */
+  gap: 20px;             /* espacio entre cajas */
+  justify-content: center; /* centra horizontalmente */
+}
+
+/* Cada producto */
+.caja {
+  flex: 1 1 250px;       /* ancho mínimo 250px, se adapta */
+  max-width: 300px;      /* ancho máximo */
+  border: 1px solid #db2a2a;
+  padding: 15px;
+  text-align: center;    /* centra contenido */
+  box-shadow: 2px 2px 5px rgba(197, 18, 18, 0.1);
+}
+
+/* Imagen dentro de cada caja */
+.caja img {
+  width: 100%;
+  height: auto;          /* mantiene proporción */
+  margin-bottom: 10px;
+  /* Para pantallas menores a 600px */
+@media (max-width: 600px) {
+  .contenedor {
+    flex-direction: column; /* todo en columna */
+    align-items: center;
+  }
+
+  .caja {
+    max-width: 90%;         /* ocupa casi todo el ancho */
+  }
+}
+
+}
